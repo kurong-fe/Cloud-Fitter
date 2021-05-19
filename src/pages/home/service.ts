@@ -1,6 +1,7 @@
 import { request } from 'umi';
 
-export async function queryData() {
+// 查询所有云的ECS
+export async function queryAllEcs() {
   return request('/ecs/all', {
     method: 'POST',
   });

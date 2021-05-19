@@ -2,7 +2,7 @@ import { defineConfig } from 'umi';
 import routes from './routes';
 
 export default defineConfig({
-  title: 'panpan',
+  title: 'Cloud-Fitter',
   hash: true,
   targets: {
     ie: 11,
@@ -19,11 +19,9 @@ export default defineConfig({
   },
   routes,
   proxy: {
-    '/auth': {
-      target: 'http://192.168.16.37:8085',
-    },
-    '/phm-console': {
-      target: 'http://192.168.16.37:8085',
+    '/ecs': {
+      target: 'http://121.41.88.120:8080',
+      changeOrigin: true,
     },
   },
   fastRefresh: {},
